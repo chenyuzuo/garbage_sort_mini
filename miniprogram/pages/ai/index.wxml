@@ -1,0 +1,38 @@
+<view class="cu-bar bg-darkGray search">
+  <view class=" search-form  round " bindtap="goSearch">
+    <text class="cuIcon-search text-green"></text>
+    <input type="text" placeholder="输入垃圾名称" confirm-type="search" bindinput="searchIcon"></input>
+  </view>
+</view>
+<view class='ai-view'>
+  <image src='/images/paizhao.png' class='ai-paizhao' bindtap='onBindCamera' />
+  <text class='txt'>拍照识别</text>
+</view>
+
+
+
+<view class='ai-view'>
+  <image src='/images/speech_icon_128.png' class='ai-paizhao'  bindtouchstart='onTouchStart' bindtouchend='onTouchEnd' />
+  <text class='txt'>语音识别</text>
+</view>
+<view  wx:if="{{canRecordStart}}"  class="speak-style">
+    <image wx:if="{{j==1}}" class="sound-style" src="../../images/speech_1.png" ></image>
+    <image wx:if="{{j==2}}" class="sound-style" src="../../images/speech_2.png" ></image>
+    <image wx:if="{{j==3}}" class="sound-style" src="../../images/speech_3.png" ></image>
+    <image wx:if="{{j==4}}" class="sound-style" src="../../images/speech_4.png" ></image>
+    <image wx:if="{{j==5}}"class="sound-style" src="../../images/speech_5.png" ></image>
+ </view>
+
+<view class="box" wx:if="{{SHOW_TOP}}">
+  <view class='arrow'></view>
+  <view class='body' bindtap='showModal'>
+    <text>点击「添加到我的小程序」</text>
+  </view>
+</view>
+
+<view class="kefu-box">
+<button  open-type="contact" class="kefu-body">
+    <image class="img" src="/images/ai-chat.png"></image>
+    <text class="q-tx">联系我们</text>
+</button>
+</view>
