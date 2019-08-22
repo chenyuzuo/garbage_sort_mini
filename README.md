@@ -3,7 +3,7 @@
 2. 小程序中有用到百度ai的图片识别和语音识别接口，需自己到百度平台申请，然后用对应的key替换。
    替换文件cloudfunctions-baiduAccessToken-index.js中的apiKey和secretKey。
    ```
-   et apiKey = '替换成自己的百度ai上的接口apiKey',
+    let apiKey = '替换成自己的百度ai上的接口apiKey',
     grantType = 'client_credentials',
     secretKey = '替换成自己的secretKey',
     url = `https://aip.baidubce.com/oauth/2.0/token`
