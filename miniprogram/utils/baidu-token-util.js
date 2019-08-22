@@ -1,10 +1,12 @@
 
 const getBdAiAccessToken = function () {
-   return  new Promise((resolve, reject) => {
+    return  new Promise((resolve, reject) => {
         console.log('getBdAiAccessToken!');
         var time = wx.getStorageSync("time");
         var curTime = new Date().getTime();
-        var timeNum = new Date(parseInt(curTime - time) * 1000).getDay();
+        console.log('time:'+time+'----curTime:'+curTime);
+        console.log(parseInt((curTime - time) / 1000/60/60/24));
+        var timeNum = parseInt((curTime - time) / 1000/60/60/24);
         console.log("token生成天数timeNum:" + timeNum);
         var accessToken = wx.getStorageSync("access_token")
         console.log("缓存中的accessToken===" + accessToken)
